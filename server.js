@@ -4,12 +4,12 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const session = require("express-session");
-const passport = require('passport'); 
+const passport = require("passport");
 const methodOverride = require("method-override");
 
 require("dotenv").config();
-require('./config/database'); 
-require("./config/passport"); 
+require("./config/database");
+require("./config/passport");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -33,8 +33,14 @@ app.use(
   })
 );
 // mount passport after session but before routes that would need to access the current user
-app.use(passport.initialize()); 
-app.use(passport.session()); 
+app.use(passport.initialize());
+app.use(passport.session());
+// instead of having to pass 'req.user' everytime we render a ejs template
+// take advantage of express' 'res.locals' object to return 'req.user' in a custom middleware function
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next(); // next is not needed if route does res.render('template', cb)
+});
 
 app.use(methodOverride("_method"));
 
