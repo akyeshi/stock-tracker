@@ -26,7 +26,7 @@ passport.use(
     {
       // configuration object
       clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE.CLIENT_SECRET,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: process.env.GOOGLE_CALLBACK,
     },
 
