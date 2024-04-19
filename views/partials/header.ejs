@@ -9,8 +9,14 @@
   <body>
     <nav>
       <a href="/">Home</a>
-      <a href="#">Watchlists</a>
-      <a href="#">Login</a>
+      <a href="/Stocks">All Stocks</a>
+      <% if (user) { %>
+      <a href="/watchlist/new">Add Stock to Watchlist</a>
+      <a href="/watchlists">Add Watchlist</a>
+      <a href="/logout">Log Out</a>
+      <% } else { %>
+      <a href="/auth/google">Log In</a>
+      <% } %>
     </nav>
     <main>
       <h1><%= title %></h1>
