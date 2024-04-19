@@ -4,9 +4,12 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const session = require("express-session");
+const passport = require('passport'); 
 const methodOverride = require("method-override");
 
 require("dotenv").config();
+require('./config/database'); 
+require("./config/passport"); 
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -29,6 +32,9 @@ app.use(
     saveUninitialized: true,
   })
 );
+// mount passport after session but before routes that would need to access the current user
+app.use(passport.initialize()); 
+app.use(passport.session()); 
 
 app.use(methodOverride("_method"));
 
