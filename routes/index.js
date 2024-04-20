@@ -4,7 +4,7 @@ const passport = require("passport");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("index", { title: "Stock Tracker" });
 });
 
 // -------- define routes for authentication --------
@@ -25,7 +25,6 @@ router.get(
   )
 );
 
-
 // callback route (Google OAuth callback route)
 // callback route (redirect after successful or unsuccessful login)
 router.get(
@@ -36,10 +35,9 @@ router.get(
   })
 );
 
-
 // logout route (Google OAuth logout route)
 router.get("/logout", function (req, res) {
-  // logout() method is automatically added to the 'req' object by Passport 
+  // logout() method is automatically added to the 'req' object by Passport
   req.logout(function () {
     res.redirect("/");
   });

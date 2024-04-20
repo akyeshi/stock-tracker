@@ -2,10 +2,8 @@
 
 body {
   font-family: "Varela Round", system-ui; 
-  /* Arial, sans-serif; */
   font-weight: 400; 
   font-style: normal; 
-  /* padding: 50px;  */
   text-align: center;
   background-color: #00B7FF;
   color: white;
@@ -26,11 +24,17 @@ body > nav {
 a {
   color: #00B7FF;
   text-decoration: none;
+  background: black; 
+  border-radius: 8px; 
+  padding: 5px; 
 }
 
 a:hover {
   color: #00B7FF;
-  text-decoration: underline;
+  text-decoration: none;
+  background: greenyellow; 
+  border-radius: 8px; 
+  padding: 5px; 
 }
 
 
