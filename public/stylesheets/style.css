@@ -1,14 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&family=Varela+Round&display=swap'); 
 
+/* *{
+  margin: 0; 
+  padding: 0; 
+} */
+
+:root {
+  --red-color: red;
+  --a-tag-color: #00B7FF; 
+  --li--hover-color: black;
+  --teal-color: teal; 
+  --magenta-color: megenta; 
+  --dodgerblue-color: dodgerblue; 
+  --palegoldenrod-color: palegoldenrod;
+  --linen-color: linen;
+  --saddlebrown-color: saddlebrown; 
+  --seethrough-lightgrey-color: #CCCCCC88; 
+}
+
+#wall-street-img {
+  max-width: 60px; 
+  max-height: 60px; 
+  object-fit: contain; /* maintain aspect ratio */
+  position: absolute; 
+  /* border-radius: 50%;  */
+  top: 5px; 
+  left: 18px; 
+  transform: rotate(15deg); 
+  opacity: 1; 
+  transition: opacity 0.3s ease; 
+}
+
+#wall-street-img:hover {
+  max-width: 60px; 
+  max-height: 60px; 
+  object-fit: contain; /* maintain aspect ratio */
+  position: absolute; 
+  /* border-radius: 50%;  */
+  top: 5px; 
+  left: 18px; 
+  transform: rotate(15deg); 
+  opacity: 0.8; 
+  cursor: pointer;
+}
+
 body {
   font-family: "Varela Round", system-ui; 
   font-weight: 400; 
   font-style: normal; 
   text-align: center;
-  background-color: #00B7FF;
-  color: white;
+  /* background-color: #00B7FF; */
+  color: black;
   box-sizing: border-box;
   margin: 0; 
+  min-height: 100vh; 
+
+  /* background-image: url("../images/pink-skyline.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;  */
+
 }
 
 
@@ -18,8 +69,15 @@ body > nav {
   align-items: center;
   background-color: red;
   gap: 18px; 
-  padding: 20px; 
+  padding: 15px; 
+  isolation: isolate;
+
+  /* background-image: url("../images/bull-market.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;  */
 }
+
 
 a {
   color: #00B7FF;
@@ -40,17 +98,6 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 footer {
   text-align: center;
   color: red;
@@ -61,3 +108,21 @@ footer {
   width: 100%; 
   padding: 20px; 
 }
+
+#dark-mode-icon {
+  position: fixed; 
+  bottom: 32px; 
+  right: 32px; 
+  cursor: pointer;
+  opacity: 1; 
+  transition: opacity 0.3s ease; 
+}
+
+#dark-mode-icon:hover {
+  position: fixed; 
+  bottom: 32px; 
+  right: 32px; 
+  opacity: 0.7; 
+  cursor: pointer;
+}
+

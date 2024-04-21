@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Stock Tracker</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script defer src="/javascripts/script.js"></script>
+    <title>Stocks Tracker</title>
   </head>
   <body>
     <nav>
+      <img id="wall-street-img" src="/images/wallstreet.png" alt="wall-street" />
       <a href="/">Home</a>
       <a href="/Stocks">All Stocks</a>
       <% if (user) { %>
-      <a href="/watchlist/:id/stocks/new">Add Stock to Watchlist</a>
+      <a href="/watchlist/:id/stocks/new">Add Stocks to Watchlist</a>
       <a href="/watchlists">Add Watchlist</a>
       <a href="/logout">Log Out</a>
       <% } else { %>
