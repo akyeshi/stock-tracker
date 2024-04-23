@@ -18,6 +18,9 @@
   --seethrough-lightgrey-color: #CCCCCC88; 
 }
 
+
+/* ---------- HomePage View ----------  */
+
 #logo-img {
   max-width: 48px; 
   max-height: 48px; 
@@ -46,10 +49,11 @@
 }
 
 img#bull-image {
-  max-width: 1000px; 
-  max-height: 1000px; 
+  max-width: 600px; 
+  max-height: 600px; 
   object-fit: contain; /* maintain aspect ratio */
   border-radius: 8px;
+  border: 0.5px solid red; 
 }
 
 body > nav {
@@ -121,6 +125,9 @@ body {
 }
 
 
+/* ---------- Tickers View ----------  */
+
+
 table {
   /* border: 1px solid red;  */
   margin: auto; 
@@ -135,6 +142,15 @@ td ion-icon {
   color: teal; 
   font-weight: bold;
   --ionicon-stroke-width: 50px; 
+}
+
+td ion-icon:hover {
+  font-size: 20px; 
+  color: teal; 
+  font-weight: bold;
+  --ionicon-stroke-width: 50px; 
+  opacity: 0.7; 
+  cursor: pointer;
 }
 
 table thead th {
@@ -159,6 +175,76 @@ table tbody td:nth-last-child(1) {
   border-collapse: collapse;
   border-bottom: 1px solid purple; 
 } */
+
+
+/* ---------- Watchlists View ----------  */
+
+
+#watchlist-wrapper {
+  display: grid; 
+  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(5, 150px);
+  grid-gap: 1em; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.watchlist-item a {
+  border: 1px solid red; 
+  background: green;
+  border-radius: 8px;
+  height: 150px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 30px;
+
+  background-image: url("../images/stock.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+.watchlist-item a:hover {
+  border: 1px solid red; 
+  background: green;
+  border-radius: 8px;
+  /* height: 200px;  */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  background-color: rgba(255,0,0,0.8); 
+  cursor: pointer;
+
+  background-image: url("../images/stock.jpg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Footer View ----------  */
 
 footer {
   text-align: center;

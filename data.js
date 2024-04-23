@@ -1,3 +1,10 @@
+exports.watchlists = [
+  { name: "Blue Chips" },
+  { name: "Small Caps" },
+  { name: "Russian Roulette" },
+];
+
+
 exports.tickers = [
   {
     symbol: "AAPL",
@@ -450,3 +457,4 @@ exports.tickers = [
     marketcap: 41982000000,
   },
 ];
+

@@ -28,7 +28,16 @@
       <td><%= ticker.avgVolume %></td>
       <td><%= ticker.marketcap %></td>
       <% if (user) { %>
-      <td><ion-icon name="add-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;</td>
+      <td>
+        <ion-icon name="add-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+        <!-- <div>
+          <select name="" id="">
+            <option value="">watchlist 01</option>
+            <option value="">watchlist 02</option>
+            <option value="">watchlist 03</option>
+          </select>
+        </div> -->
+      </td>
       <% } %>
     </tr>
     <% }) %>
