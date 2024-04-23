@@ -45,6 +45,13 @@
   cursor: pointer;
 }
 
+img#bull-image {
+  max-width: 1000px; 
+  max-height: 1000px; 
+  object-fit: contain; /* maintain aspect ratio */
+  border-radius: 5px;
+}
+
 body > nav {
   display: flex; 
   justify-content: flex-end; 
@@ -95,17 +102,6 @@ body {
 }
 
 
-footer {
-  text-align: center;
-  color: red;
-  font-size: .9rem;
-  /* background: red;  */
-  position: fixed; 
-  bottom: 0; 
-  width: 100%; 
-  padding: 20px; 
-}
-
 #dark-mode-icon {
   position: fixed; 
   bottom: 32px; 
@@ -123,3 +119,40 @@ footer {
   cursor: pointer;
 }
 
+
+table {
+  border: 1px solid red; 
+  margin: auto; 
+  width: 90vw; 
+  border-collapse: collapse; 
+  height: 200px; 
+  overflow-y: auto; 
+
+}
+
+td ion-icon {
+  font-size: 20px; 
+  color: red; 
+  font-weight: bold;
+  --ionicon-stroke-width: 50px; 
+}
+
+table thead th {
+  font-weight: bolder; 
+  color: red; 
+  font-size: 18px; 
+}
+
+
+
+
+footer {
+  text-align: center;
+  color: red;
+  font-size: .9rem;
+  /* background: red;  */
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+  padding: 10px; 
+}
