@@ -2,8 +2,8 @@
 
 <table>
   <thead>
-    <tr style="border-bottom: 5px solid red">
-      <th>Ticker</th>
+    <tr style="border-bottom: 3px solid red">
+      <th>Symbol</th>
       <th>Name</th>
       <th>Price</th>
       <th>Currency</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% tickers.forEach(ticker => { %>
     <tr>
-      <td style="color: red"><%= ticker.ticker %></td>
+      <td style="color: red"><%= ticker.symbol %></td>
       <td><%= ticker.name %></td>
       <td><%= ticker.price %></td>
       <td><%= ticker.currency %></td>

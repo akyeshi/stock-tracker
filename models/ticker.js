@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 const tickerSchema = new Schema(
   {
-    ticker: {
+    symbol: {
       type: String,
       unique: true,
       required: true,
     },
-    name: String, 
+    name: String,
     price: Number,
     currency: String,
     ceo: String,

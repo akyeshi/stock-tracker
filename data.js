@@ -1,6 +1,6 @@
 exports.tickers = [
   {
-    ticker: "AAPL",
+    symbol: "AAPL",
     name: "Apple",
     price: 168,
     currency: "USD",
@@ -9,7 +9,7 @@ exports.tickers = [
     marketcap: 256000000000,
   },
   {
-    ticker: "TSLA",
+    symbol: "TSLA",
     name: "Tesla",
     price: 142,
     currency: "USD",
@@ -18,7 +18,7 @@ exports.tickers = [
     marketcap: 452000000000,
   },
   {
-    ticker: "AMZN",
+    symbol: "AMZN",
     name: "Amazon",
     price: 177,
     currency: "USD",
@@ -27,7 +27,7 @@ exports.tickers = [
     marketcap: 184000000000,
   },
   {
-    ticker: "NVDA",
+    symbol: "NVDA",
     name: "Nvidia",
     price: 795,
     currency: "USD",
@@ -36,7 +36,7 @@ exports.tickers = [
     marketcap: 198000000000,
   },
   {
-    ticker: "NFLX",
+    symbol: "NFLX",
     name: "Netflix",
     price: 554,
     currency: "USD",
@@ -45,7 +45,7 @@ exports.tickers = [
     marketcap: 238000000000,
   },
   {
-    ticker: "ARM",
+    symbol: "ARM",
     name: "Arm Holdings",
     price: 93,
     currency: "USD",
@@ -54,7 +54,7 @@ exports.tickers = [
     marketcap: 95000000000,
   },
   {
-    ticker: "ORCL",
+    symbol: "ORCL",
     name: "Oracle",
     price: 114,
     currency: "USD",
@@ -63,7 +63,7 @@ exports.tickers = [
     marketcap: 314000000000,
   },
   {
-    ticker: "META",
+    symbol: "META",
     name: "Facebook",
     price: 481,
     currency: "USD",
@@ -72,7 +72,7 @@ exports.tickers = [
     marketcap: 122000000000,
   },
   {
-    ticker: "ABNB",
+    symbol: "ABNB",
     name: "Airbnb",
     price: 156,
     currency: "USD",
@@ -81,7 +81,7 @@ exports.tickers = [
     marketcap: 99000000000,
   },
   {
-    ticker: "BRK-A",
+    symbol: "BRK-A",
     name: "Berkshire Hathaway Inc",
     price: 61728400,
     currency: "USD",
@@ -90,7 +90,7 @@ exports.tickers = [
     marketcap: 884000000000,
   },
   {
-    ticker: "GOOGL",
+    symbol: "GOOGL",
     name: "Google",
     price: 156,
     currency: "USD",
@@ -99,7 +99,7 @@ exports.tickers = [
     marketcap: 1950000000000,
   },
   {
-    ticker: "MSFT",
+    symbol: "MSFT",
     name: "Microsoft",
     price: 400,
     currency: "USD",
@@ -108,7 +108,7 @@ exports.tickers = [
     marketcap: 2970000000000,
   },
   {
-    ticker: "CRWD",
+    symbol: "CRWD",
     name: "CrowdStrike",
     price: 289,
     currency: "USD",
@@ -117,7 +117,7 @@ exports.tickers = [
     marketcap: 69000000000,
   },
   {
-    ticker: "BABA",
+    symbol: "BABA",
     name: "Alibaba",
     price: 70,
     currency: "USD",
@@ -126,7 +126,7 @@ exports.tickers = [
     marketcap: 172000000000,
   },
   {
-    ticker: "SHOP",
+    symbol: "SHOP",
     name: "Shopify",
     price: 255,
     currency: "USD",
@@ -135,7 +135,7 @@ exports.tickers = [
     marketcap: 90000000000,
   },
   {
-    ticker: "BIDU",
+    symbol: "BIDU",
     name: "Bidu",
     price: 97,
     currency: "USD",
@@ -144,7 +144,7 @@ exports.tickers = [
     marketcap: 34000000000,
   },
   {
-    ticker: "JD",
+    symbol: "JD",
     name: "JD.com",
     price: 26,
     currency: "USD",
@@ -153,7 +153,7 @@ exports.tickers = [
     marketcap: 41000000000,
   },
   {
-    ticker: "COIN",
+    symbol: "COIN",
     name: "Coinbase",
     price: 225,
     currency: "USD",
@@ -162,7 +162,7 @@ exports.tickers = [
     marketcap: 54000000000,
   },
   {
-    ticker: "PDD",
+    symbol: "PDD",
     name: "Pinduoduo",
     price: 124,
     currency: "USD",
@@ -171,7 +171,7 @@ exports.tickers = [
     marketcap: 164000000000,
   },
   {
-    ticker: "BILI",
+    symbol: "BILI",
     name: "Bilibili",
     price: 11,
     currency: "USD",
@@ -180,7 +180,7 @@ exports.tickers = [
     marketcap: 4845000000,
   },
   {
-    ticker: "GS",
+    symbol: "GS",
     name: "Goldman Sachs",
     price: 417,
     currency: "USD",
@@ -189,7 +189,7 @@ exports.tickers = [
     marketcap: 135000000000,
   },
   {
-    ticker: "TSM",
+    symbol: "TSM",
     name: "Taiwan Semiconductor Manufacturing",
     price: 129,
     currency: "USD",
@@ -198,7 +198,7 @@ exports.tickers = [
     marketcap: 608000000000,
   },
   {
-    ticker: "WTI",
+    symbol: "WTI",
     name: "W&T Offshore",
     price: 2,
     currency: "USD",
@@ -207,7 +207,7 @@ exports.tickers = [
     marketcap: 348000000,
   },
   {
-    ticker: "WB",
+    symbol: "WB",
     name: "Weibo",
     price: 8,
     currency: "USD",
@@ -216,7 +216,7 @@ exports.tickers = [
     marketcap: 1962000000,
   },
   {
-    ticker: "LYFT",
+    symbol: "LYFT",
     name: "Lyft",
     price: 16,
     currency: "USD",
@@ -225,7 +225,7 @@ exports.tickers = [
     marketcap: 6689000000,
   },
   {
-    ticker: "IQ",
+    symbol: "IQ",
     name: "IQ1Y1",
     price: 4,
     currency: "USD",
@@ -234,7 +234,7 @@ exports.tickers = [
     marketcap: 4136000000,
   },
   {
-    ticker: "JNJ",
+    symbol: "JNJ",
     name: "Johnson & Johnson",
     price: 149,
     currency: "USD",
@@ -243,7 +243,7 @@ exports.tickers = [
     marketcap: 359346000000,
   },
   {
-    ticker: "TCEHY",
+    symbol: "TCEHY",
     name: "Tencent",
     price: 41,
     currency: "USD",
@@ -252,7 +252,7 @@ exports.tickers = [
     marketcap: 386388000000,
   },
   {
-    ticker: "BZUN",
+    symbol: "BZUN",
     name: "Baozun",
     price: 2,
     currency: "USD",
@@ -261,7 +261,7 @@ exports.tickers = [
     marketcap: 148276000,
   },
   {
-    ticker: "ROKU",
+    symbol: "ROKU",
     name: "Roku",
     price: 58,
     currency: "USD",
@@ -270,7 +270,7 @@ exports.tickers = [
     marketcap: 8406000000,
   },
   {
-    ticker: "CMG",
+    symbol: "CMG",
     name: "Chipotle Mexican Grill",
     price: 2884,
     currency: "USD",
@@ -279,7 +279,7 @@ exports.tickers = [
     marketcap: 79000000000,
   },
   {
-    ticker: "MU",
+    symbol: "MU",
     name: "Micron Technology",
     price: 109,
     currency: "USD",
@@ -288,7 +288,7 @@ exports.tickers = [
     marketcap: 120836000000,
   },
   {
-    ticker: "TXN",
+    symbol: "TXN",
     name: "Texas Instruments",
     price: 163,
     currency: "USD",
@@ -297,7 +297,7 @@ exports.tickers = [
     marketcap: 148000000000,
   },
   {
-    ticker: "LCID",
+    symbol: "LCID",
     name: "Lucid Group",
     price: 2,
     currency: "USD",
@@ -306,7 +306,7 @@ exports.tickers = [
     marketcap: 5488000000,
   },
   {
-    ticker: "UBER",
+    symbol: "UBER",
     name: "Uber",
     price: 68,
     currency: "USD",
@@ -315,7 +315,7 @@ exports.tickers = [
     marketcap: 143585000000,
   },
   {
-    ticker: "SWKS",
+    symbol: "SWKS",
     name: "Skyworks Solutions",
     price: 98,
     currency: "USD",
@@ -324,7 +324,7 @@ exports.tickers = [
     marketcap: 15741000000,
   },
   {
-    ticker: "NTES",
+    symbol: "NTES",
     name: "NetEase",
     price: 94,
     currency: "USD",
@@ -333,7 +333,7 @@ exports.tickers = [
     marketcap: 61000000000,
   },
   {
-    ticker: "SOHU",
+    symbol: "SOHU",
     name: "Sohu.com",
     price: 11,
     currency: "USD",
@@ -342,7 +342,7 @@ exports.tickers = [
     marketcap: 366000000,
   },
   {
-    ticker: "TCOM",
+    symbol: "TCOM",
     name: "Trip.com",
     price: 49,
     currency: "USD",
@@ -351,7 +351,7 @@ exports.tickers = [
     marketcap: 31888000000,
   },
   {
-    ticker: "SQ",
+    symbol: "SQ",
     name: "Square",
     price: 71,
     currency: "USD",
@@ -360,7 +360,7 @@ exports.tickers = [
     marketcap: 44084000000,
   },
   {
-    ticker: "AMD",
+    symbol: "AMD",
     name: "Advanced Micro Devices",
     price: 148,
     currency: "USD",
@@ -369,7 +369,7 @@ exports.tickers = [
     marketcap: 240223000000,
   },
   {
-    ticker: "QCOM",
+    symbol: "QCOM",
     name: "Qualcomm",
     price: 160,
     currency: "USD",
@@ -378,7 +378,7 @@ exports.tickers = [
     marketcap: 178761000000,
   },
   {
-    ticker: "GILD",
+    symbol: "GILD",
     name: "Gilead Sciences",
     price: 66,
     currency: "USD",
@@ -387,7 +387,7 @@ exports.tickers = [
     marketcap: 83485000000,
   },
   {
-    ticker: "PYPL",
+    symbol: "PYPL",
     name: "Paypal",
     price: 63,
     currency: "USD",
@@ -396,7 +396,7 @@ exports.tickers = [
     marketcap: 66516000000,
   },
   {
-    ticker: "PLTR",
+    symbol: "PLTR",
     name: "Palantir",
     price: 20,
     currency: "USD",
@@ -405,7 +405,7 @@ exports.tickers = [
     marketcap: 46000000000,
   },
   {
-    ticker: "BIIB",
+    symbol: "BIIB",
     name: "Biogen",
     price: 194,
     currency: "USD",
@@ -414,7 +414,7 @@ exports.tickers = [
     marketcap: 28216000000,
   },
   {
-    ticker: "USO",
+    symbol: "USO",
     name: "United States Oil Fund",
     price: 78,
     currency: "USD",
@@ -423,7 +423,7 @@ exports.tickers = [
     marketcap: 1390000000,
   },
   {
-    ticker: "PFE",
+    symbol: "PFE",
     name: "Pfizer",
     price: 26,
     currency: "USD",
@@ -432,7 +432,7 @@ exports.tickers = [
     marketcap: 148698000000,
   },
   {
-    ticker: "CRM",
+    symbol: "CRM",
     name: "Salesforce",
     price: 273,
     currency: "USD",
@@ -441,7 +441,7 @@ exports.tickers = [
     marketcap: 265596000000,
   },
   {
-    ticker: "SMCI",
+    symbol: "SMCI",
     name: "Super Micro Computer",
     price: 717,
     currency: "USD",
