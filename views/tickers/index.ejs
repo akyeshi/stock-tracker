@@ -16,6 +16,10 @@
   <tbody>
     <% tickers.forEach(ticker => { %>
     <tr>
+      <!-- <td style="color: red"><%= ticker.symbol %>&nbsp;&nbsp;&nbsp;<ion-icon name="add-circle-outline"></ion-icon></td> -->
+      <style>
+        /* td {color: black};  */
+      </style>
       <td style="color: red"><%= ticker.symbol %></td>
       <td><%= ticker.name %></td>
       <td><%= ticker.price %></td>
@@ -24,7 +28,7 @@
       <td><%= ticker.avgVolume %></td>
       <td><%= ticker.marketcap %></td>
       <% if (user) { %>
-      <td><ion-icon name="add-circle-outline"></ion-icon></td>
+      <td><ion-icon name="add-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;</td>
       <% } %>
     </tr>
     <% }) %>

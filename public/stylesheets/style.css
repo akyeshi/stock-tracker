@@ -24,8 +24,8 @@
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
   /* border-radius: 50%;  */
-  top: 5px; /* 5 */
-  left: 18px; /* 18 */
+  top: 6px; /* 5 */
+  left: 25px; /* 18 */
 
   /* transform: rotate(15deg);  */
   opacity: 1; 
@@ -38,8 +38,8 @@
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
   /* border-radius: 50%;  */
-  top: 5px; 
-  left: 18px; 
+  top: 6px; 
+  left: 25px; 
   /* transform: rotate(15deg);  */
   opacity: 0.8; 
   cursor: pointer;
@@ -49,7 +49,7 @@ img#bull-image {
   max-width: 1000px; 
   max-height: 1000px; 
   object-fit: contain; /* maintain aspect ratio */
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 body > nav {
@@ -61,17 +61,17 @@ body > nav {
   padding: 15px; 
   opacity: 0.8; 
 
-  /* background-image: url("../images/bull-market.jpg"); 
+  background-image: url("../images/stock-price.jpg"); 
   background-size: cover; 
   background-repeat: no-repeat; 
-  background-position: center;  */
+  background-position: center; 
 }
 
 
 a {
-  color: #00B7FF;
+  color: white;
   text-decoration: none;
-  background: black; 
+  background: red; 
   border-radius: 8px; 
   padding: 5px; 
 }
@@ -127,7 +127,6 @@ table {
   border-collapse: collapse; 
   height: 200px; 
   overflow-y: auto; 
-
 }
 
 td ion-icon {
@@ -143,8 +142,22 @@ table thead th {
   font-size: 18px; 
 }
 
+table tbody td {
+  border-bottom: 1px solid black; 
+}
 
+/* table tbody td:nth-child(1) {
+  border-left: 1px solid red; 
+}
 
+table tbody td:nth-last-child(1) {
+  border-right: 1px solid red; 
+} */
+
+/* table tbody td:nth-last-child(-n+2) {
+  border-collapse: collapse;
+  border-bottom: 1px solid purple; 
+} */
 
 footer {
   text-align: center;
