@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+
+<!-- <div id="watchlist-searchbox">
+  <input type="text" placeholder="Search for ticker" />
+  <ion-icon name="search-circle-outline"></ion-icon>
+</div> -->
+
+<div id="select-ticker-to-add-to-watchlist">
+  <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
+    <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
+  </form>
+  <hr />
+  <form action="/watchlists/<%= watchlist._id %>/tickers" method="POST">
+    <select name="symbolId">
+      <% tickers.forEach(ticker => { %>
+      <option value="<%= ticker._id %>"><%= ticker.symbol %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add to Watchlist</button>
+    <!-- <button type="submit">Update</button> -->
+  </form>
+</div>
+
+<% if (watchlist.stocks.length) { %>
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Currency</th>
+      <th>CEO</th>
+      <th>Avg Volume</th>
+      <th>Market Cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% watchlist.stocks.forEach(stock => { %>
+    <tr>
+      <td><%= stock.symbol %></td>
+      <td><%= stock.name %></td>
+      <td><%= stock.price %></td>
+      <td><%= stock.currency %></td>
+      <td><%= stock.ceo %></td>
+      <td><%= stock.avgVolume %></td>
+      <td><%= stock.marketcap %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<% } %> <%- include('../partials/footer') %>

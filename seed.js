@@ -24,11 +24,12 @@ const data = require("./data");
     Ticker.findOne({ symbol: /AAPL / }),
   ]);
 
-  const watchlists = results[0];
+  // *** is it watchlist or watchlists here ?????
+  const watchlist = results[0];
   const aapl = results[1];
-  watchlists.stock.push(aapl._id);
-  await watchlists.save();
-  console.log("Watchlists with AAPL: ", watchlists);
+  watchlist.stocks.push(aapl._id);
+  await watchlist.save();
+  console.log("Watchlists with AAPL: ", watchlist);
 
   process.exit();
 })();

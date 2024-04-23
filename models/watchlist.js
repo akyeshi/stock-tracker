@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const watchlistSchema = new Schema(
   {
     name: String,
-    stock: [
+    stocks: [
       {
         type: Schema.Types.ObjectId,
         ref: "Ticker",
@@ -14,6 +14,7 @@ const watchlistSchema = new Schema(
     user: {
       type: Schema.Types.ObjectId,
       ref: "User",
+      required: true,
     },
     userName: String,
     userAvatar: String,
@@ -23,6 +24,5 @@ const watchlistSchema = new Schema(
   }
 );
 
-
 // compile schema into a model and export it into WAtchlist controller module
-module.exports = mongoose.model("Watchlist", watchlistSchema); 
+module.exports = mongoose.model("Watchlist", watchlistSchema);
