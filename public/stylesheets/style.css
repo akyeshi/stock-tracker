@@ -21,28 +21,29 @@
 
 /* ---------- HomePage View ----------  */
 
-#logo-img {
+img#logo-img {
   max-width: 48px; 
   max-height: 48px; 
+  border: 5px solid red; 
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
-  /* border-radius: 50%;  */
-  top: 6px; /* 5 */
-  left: 25px; /* 18 */
+  border-radius: 50%; 
+  top: 5; /* 5 */
+  left: 10px; /* 18 */
 
   /* transform: rotate(15deg);  */
   opacity: 1; 
   transition: opacity 0.3s ease; 
 }
 
-#logo-img:hover {
+img#logo-img:hover {
   max-width: 48px; 
   max-height: 48px; 
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
   /* border-radius: 50%;  */
-  top: 6px; 
-  left: 25px; 
+  top: 5; 
+  left: 10px; 
   /* transform: rotate(15deg);  */
   opacity: 0.8; 
   cursor: pointer;
@@ -223,6 +224,19 @@ table tbody td:nth-last-child(1) {
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
+}
+
+img#user-avatar {
+  border: 2px solid red; 
+  border-radius: 50%; 
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+  position: absolute; 
+  top: 6px; /* 5 */
+  left: 25px; /* 18 */
+  opacity: 1; 
+  transition: opacity 0.3s ease; 
 }
 
 

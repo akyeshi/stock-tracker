@@ -4,7 +4,7 @@
   <input type="text" placeholder="Search for ticker" />
   <ion-icon name="search-circle-outline"></ion-icon>
 </div> -->
-
+<img id="user-avatar" src="<%= user.avatar %>" alt="user avatar">
 <div id="select-ticker-to-add-to-watchlist">
   <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
     <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>

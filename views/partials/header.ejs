@@ -10,10 +10,11 @@
   </head>
   <body>
     <nav>
-      <img id="logo-img" src="/images/coin.png" alt="wall-street" />
-      <!-- <a href="/">Home</a> -->
+      <!-- <img id="logo-img" src="/images/coin.png" alt="wall-street" /> -->
+      <a href="/">Home</a>
       <a href="/tickers">Tickers</a>
       <% if (user) { %>
+      <img id="logo-img" src="<%= user.avatar %>" alt="user avatar" />
       <!-- <a href="/watchlist/:id/stocks/new">Add Stock to Watchlist</a> -->
       <a href="/watchlists">Watchlists</a>
       <a href="/logout">Log Out</a>
