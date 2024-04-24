@@ -4,7 +4,7 @@
   <input type="text" placeholder="Search for ticker" />
   <ion-icon name="search-circle-outline"></ion-icon>
 </div> -->
-<img id="user-avatar" src="<%= user.avatar %>" alt="user avatar">
+
 <div id="select-ticker-to-add-to-watchlist">
   <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
     <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
@@ -46,8 +46,13 @@
       <td><%= stock.avgVolume %></td>
       <td><%= stock.marketcap %></td>
       <td>
-        <form action="/watchlists/<%= watchlist._id %>/tickers/<%= stock._id %>?_method=DELETE" method="POST">
-          <button id="delete-ticker-from-watchlist" type="submit"><ion-icon name="add-circle-outline"></ion-icon></button>
+        <form
+          action="/watchlists/<%= watchlist._id %>/tickers/<%= stock._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button id="delete-ticker-from-watchlist" type="submit">
+            <ion-icon name="add-circle-outline"></ion-icon>
+          </button>
         </form>
       </td>
     </tr>
