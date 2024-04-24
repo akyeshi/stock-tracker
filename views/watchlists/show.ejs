@@ -32,6 +32,7 @@
       <th>CEO</th>
       <th>Avg Volume</th>
       <th>Market Cap</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -44,6 +45,11 @@
       <td><%= stock.ceo %></td>
       <td><%= stock.avgVolume %></td>
       <td><%= stock.marketcap %></td>
+      <td>
+        <form action="/watchlists/<%= watchlist._id %>/tickers/<%= stock._id %>?_method=DELETE" method="POST">
+          <button id="delete-ticker-from-watchlist" type="submit"><ion-icon name="add-circle-outline"></ion-icon></button>
+        </form>
+      </td>
     </tr>
     <% }) %>
   </tbody>

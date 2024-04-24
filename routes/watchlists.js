@@ -22,6 +22,9 @@ router.get("/:id", watchlistsCtrl.show);
 // POST /watchlists
 router.post("/", watchlistsCtrl.create);
 
+// POST /watchlists/:id/tickers
+router.post("/:id/tickers", watchlistsCtrl.addToWatchlist); 
+
 // PUT /watchlists/:id
 // router.put("/:id", watchlistsCtrl.update);
 

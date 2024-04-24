@@ -7,6 +7,7 @@ module.exports = {
   create,
   new: newWatchlist,
   delete: deleteWatchlist,
+  addToWatchlist, 
 };
 
 // watchlistsCtrl.index()
@@ -55,4 +56,12 @@ async function deleteWatchlist(req, res) {
     _id: req.params.id,
   });
   res.redirect("/watchlists");
+}; 
+
+// watchlistsCtrl.addToWatchlist()
+async function addToWatchlist(req, res){
+  const watchlist = await Watchlist.findById(req.params.id); 
+  watchlist.stocks.push(req.body.symbolId); 
+  await watchlist.save(); 
+  res.redirect(`/watchlists/${watchlist._id}`); 
 }
