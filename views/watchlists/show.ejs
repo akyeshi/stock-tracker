@@ -1,31 +1,34 @@
-<%- include('../partials/header') %>
+<%- include('../partials/header') %> 
+
+<% if (edit) { %>
+<form action="/watchlists/<%= watchlist._id %>/?_method=PUT" method="POST">
+  <input type="text" value="<%= watchlist.name  %>" name="name" />
+  <button type="submit">Update</button>
+</form>
+<% } %>
 
 <!-- <div id="watchlist-searchbox">
   <input type="text" placeholder="Search for ticker" />
   <ion-icon name="search-circle-outline"></ion-icon>
 </div> -->
 
-<a href="/watchlists/<%= watchlist._id %>/edit"><ion-icon name="create-outline"></ion-icon>Edit</a>
+<a href="/watchlists/<%= watchlist._id %>?edit=true"
+  ><ion-icon name="create-outline"></ion-icon>Edit</a
+>
 
 <div id="select-ticker-to-add-to-watchlist">
-  
-  <% if (user?._id.equals(todo.user)) { %>
-
-    <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
-      <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
-    </form>
-    <hr />
-    <form action="/watchlists/<%= watchlist._id %>/tickers" method="POST">
-      <select name="symbolId">
-        <% tickers.forEach(ticker => { %>
-        <option value="<%= ticker._id %>"><%= ticker.symbol %></option>
-        <% }) %>
-      </select>
-      <button type="submit">Add to Watchlist</button>
-    </form>
-
-  <% }
-
+  <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
+    <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
+  </form>
+  <hr />
+  <form action="/watchlists/<%= watchlist._id %>/tickers" method="POST">
+    <select name="symbolId">
+      <% tickers.forEach(ticker => { %>
+      <option value="<%= ticker._id %>"><%= ticker.symbol %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add to Watchlist</button>
+  </form>
 </div>
 
 <% if (watchlist.stocks.length) { %>

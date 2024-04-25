@@ -12,7 +12,6 @@ module.exports = {
   delete: deleteWatchlist,
   addToWatchlist,
   deleteTicker,
-  edit: editWatchlist,
   update: updateWatchlist,
 };
 
@@ -25,35 +24,37 @@ async function index(req, res) {
 
 // watchlistsCtrl.show()
 async function show(req, res) {
-  const watchlist = await Watchlist.findById(
-    {
-      _id: req.params.id, 
-      user: req.user._id
-    }).populate("stocks");
+  const watchlist = await Watchlist.findById({
+    _id: req.params.id,
+    user: req.user._id,
+  }).populate("stocks");
 
   const now = new Date();
-  for (const ticker of watchlist.stocks) {
-    try {
-      if (now - ticker.updatedAt > EXPIRE_MS) {
-        const url = API_ENDPOINT + ticker.symbol;
-        const response = await fetch(url);
-        if (!response.ok) throw response;
-        const data = await response.json();
-        // console.log("--------- \n", data);
 
-        const price = Number(data["Global Quote"]["05. price"]).toFixed(2);
-        ticker.price = price;
-        await Ticker.findByIdAndUpdate(ticker._id, { price });
+  if (now - watchlist.updatedAt > EXPIRE_MS) {
+    for (const ticker of watchlist.stocks) {
+      try {
+        if (now - ticker.updatedAt > EXPIRE_MS) {
+          const url = API_ENDPOINT + ticker.symbol;
+          const response = await fetch(url);
+          if (!response.ok) throw response;
+          const data = await response.json();
+          // console.log("--------- \n", data);
+
+          const price = Number(data["Global Quote"]["05. price"]).toFixed(2);
+          ticker.price = price;
+          await Ticker.findByIdAndUpdate(ticker._id, { price });
+        }
+      } catch (err) {
+        console.log(err);
       }
-    } catch (err) {
-      console.log(err);
     }
   }
 
   const tickers = await Ticker.find({ _id: { $nin: watchlist.stocks } }).sort(
     "symbol"
   );
-  let edit = false;
+  const edit = req.query.edit; 
   res.render("watchlists/show", {
     title: watchlist.name,
     edit,
@@ -88,7 +89,7 @@ async function create(req, res) {
 async function deleteWatchlist(req, res) {
   await Watchlist.findByIdAndDelete({
     _id: req.params.id,
-    user: req.user._id
+    user: req.user._id,
   });
   res.redirect("/watchlists");
 }
@@ -114,39 +115,7 @@ async function deleteTicker(req, res) {
 }
 
 // watchlistsCtrl.edit()
-async function editWatchlist(req, res) {
-  const watchlist = await Watchlist.findById(req.params.id).populate("stocks");
 
-  const now = new Date();
-  for (const ticker of watchlist.stocks) {
-    try {
-      if (now - ticker.updatedAt > EXPIRE_MS) {
-        const url = API_ENDPOINT + ticker.symbol;
-        const response = await fetch(url);
-        if (!response.ok) throw response;
-        const data = await response.json();
-        console.log("--------- \n", data);
-
-        const price = Number(data["Global Quote"]["05. price"]).toFixed(2);
-        ticker.price = price;
-        await Ticker.findByIdAndUpdate(ticker._id, { price });
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  const tickers = await Ticker.find({ _id: { $nin: watchlist.stocks } }).sort(
-    "symbol"
-  );
-  let edit = true;
-  res.render("watchlists/show", {
-    title: watchlist.name,
-    edit,
-    watchlist,
-    tickers,
-  });
-}
 
 // watchlistsCtrl.update()
 async function updateWatchlist(req, res) {
@@ -172,7 +141,7 @@ async function updateWatchlist(req, res) {
 "06. volume": "6852997",
 "07. latest trading day": "2024-04-24",
 "08. previous close": "182.1900",
-"09. change": "1.9100",
+"09. change": "1.9100",index
 "10. change percent": "1.0484%"
 }
 }

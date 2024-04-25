@@ -4,7 +4,7 @@ const watchlistsCtrl = require("../controllers/watchlists");
 // GET /watchlists
 router.get("/", watchlistsCtrl.index);
 
-// GET /watchlists/all
+// GET /watchlists/all (icebox)
 // router.get("/all", watchlistsCtrl.allWatchlists);
 
 // GET /watchlists/new
@@ -12,9 +12,6 @@ router.get("/new", watchlistsCtrl.new);
 
 // GET /watchlists/:id
 router.get("/:id", watchlistsCtrl.show);
-
-// GET /watchlists/:id/edit
-router.get("/:id/edit", watchlistsCtrl.edit);
 
 // POST /watchlists
 router.post("/", watchlistsCtrl.create);

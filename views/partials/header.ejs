@@ -23,15 +23,5 @@
       <a href="/auth/google">Log In</a>
       <% } %>
     </nav>
-    <main>
-      <% if (edit) { %>
-      <form action="/watchlists/<%= watchlist._id %>?_method=PUT" method="POST">
-        <input type="text" value="<%= watchlist.name  %>" name="name" />
-        <button type="submit">Update</button>
-      </form>
-      <% } else { %>
-      <h1><%= title %></h1>
-      <% } %>
-    </main>
-  </body>
-</html>
+  <main>
+    <h1><%= title %></h1>
