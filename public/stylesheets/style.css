@@ -24,7 +24,7 @@
 img.user-avatar {
   max-width: 60px; 
   max-height: 60px; 
-  border: none; 
+  border: 1px solid red; 
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
   border-radius: 50%; 
@@ -41,10 +41,11 @@ img.user-avatar:hover {
   max-height: 60px; 
   object-fit: contain; /* maintain aspect ratio */
   position: absolute; 
-  /* border-radius: 50%;  */
+  border-radius: 50%; 
+  border: 1px solid green;
   top: 5; 
   left: 10px; 
-  /* transform: rotate(15deg);  */
+  transform: rotate(15deg); 
   opacity: 0.8; 
   cursor: pointer;
 }
@@ -57,11 +58,22 @@ img#bull-image {
   border: 0.5px solid red; 
 }
 
+p#welcome-words {
+  color: white; 
+  position: fixed; 
+  top: 21px; 
+  left: 85px; 
+}
+
+p#welcome-words span {
+  color: greenyellow; 
+}
+
 body > nav {
   display: flex; 
   justify-content: flex-end; 
-  align-items: center;
-  background-color: var(--red-color);
+  align-items: start;
+  background-color: red;
   gap: 18px; 
   padding: 15px; 
   opacity: 0.8; 
@@ -77,7 +89,7 @@ body > nav {
 a {
   color: white;
   text-decoration: none;
-  background: red; 
+  background: rgb(9, 124, 9); 
   border-radius: 8px; 
   padding: 5px; 
 }
@@ -271,15 +283,61 @@ button#delete-ticker-from-watchlist {
 
 
 
+/* ---------- Media Query ----------  */
 
+@media (max-width: 700px) {
+  img#bull-image {
+    max-width: 400px; 
+    max-height: 400px; 
+  }
 
+  body > nav {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: end; 
+    width: 100%; 
+    background-color: blue;
+  }
 
+  img.user-avatar {
+    position: fixed; 
+    top: 5px; 
+    right: 10px; 
+  }
+}
 
+/* @media (max-width: 380) {
+  body > nav {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end;
+    align-items: end; 
+    font-size: 5px; 
+  }
 
+  img#bull-image {
+    width: 150px; 
+  }
+}  */
 
+@media only screen and (min-width: 400px) and (max-width: 600px) {
 
+  body > nav {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: end; 
+    /* width: 100%;  */
+    /* font-size: 5px;  */
+    /* background: pink;  */
+  }
 
-
+  img#bull-image {
+    width: 350px; 
+    height: 350px; 
+    border: none; 
+  }
+}
 
 
 

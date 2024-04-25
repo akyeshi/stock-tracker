@@ -4,7 +4,8 @@ const passport = require("passport");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Stocks Tracker" });
+  let edit = false;
+  res.render("index", { title: "Stocks Tracker", edit });
 });
 
 // -------- define routes for authentication --------

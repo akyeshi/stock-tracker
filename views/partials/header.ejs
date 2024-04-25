@@ -15,15 +15,23 @@
       <a href="/tickers">Tickers</a>
       <% if (user) { %>
       <img class="user-avatar" src="<%= user.avatar %>" alt="user avatar" />
+      <p id="welcome-words">Welcome, <span><%= user.name %></span></p>
       <!-- <a href="/watchlist/:id/stocks/new">Add Stock to Watchlist</a> -->
-      <a href="/watchlists">Watchlists</a>
+      <a href="/watchlists">My Watchlists</a>
       <a href="/logout">Log Out</a>
       <% } else { %>
       <a href="/auth/google">Log In</a>
       <% } %>
     </nav>
     <main>
+      <% if (edit) { %>
+      <form action="/watchlists/<%= watchlist._id %>?_method=PUT" method="POST">
+        <input type="text" value="<%= watchlist.name  %>" name="name" />
+        <button type="submit">Update</button>
+      </form>
+      <% } else { %>
       <h1><%= title %></h1>
+      <% } %>
     </main>
   </body>
 </html>

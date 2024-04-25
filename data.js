@@ -1,3 +1,9 @@
+
+// exports.users = [
+//   {name: }
+// ]
+
+
 exports.watchlists = [
   { name: "Blue Chips" },
   { name: "Small Caps" },
