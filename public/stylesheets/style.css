@@ -72,7 +72,7 @@ p#welcome-words {
 }
 
 p#welcome-words span {
-  color: greenyellow;
+  color: white;
 }
 
 body>nav {
@@ -187,6 +187,15 @@ table thead th ion-icon:hover {
 
 table tbody td {
   border-bottom: 1px solid black;
+}
+
+table tbody td#ticker-symbol {
+  color: red;
+}
+
+table tbody td#ticker-symbol:hover {
+  color: black;
+  cursor: pointer;
 }
 
 /* table tbody td:nth-child(1) {
