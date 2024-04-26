@@ -119,7 +119,7 @@ async function deleteTicker(req, res) {
 
 // watchlistsCtrl.update()
 async function updateWatchlist(req, res) {
-  await Watchlist.findOneAndUpdate(
+  const watchlist = await Watchlist.findOneAndUpdate(
     {
       _id: req.params.id,
       user: req.user._id,
@@ -127,7 +127,7 @@ async function updateWatchlist(req, res) {
     req.body,
     { new: true } /* returns the updated document */
   );
-  res.redirect("/watchlists");
+  res.redirect(`/watchlists/${watchlist._id}`);
 }
 
 /*

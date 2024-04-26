@@ -1,117 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&family=Varela+Round&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&family=Varela+Round&display=swap');
 
-/* *{
-  margin: 0; 
-  padding: 0; 
-} */
+* {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --red-color: red;
-  --a-tag-color: #00B7FF; 
+  --a-tag-color: #00B7FF;
   --li--hover-color: black;
-  --teal-color: teal; 
-  --magenta-color: megenta; 
-  --dodgerblue-color: dodgerblue; 
+  --teal-color: teal;
+  --magenta-color: megenta;
+  --dodgerblue-color: dodgerblue;
   --palegoldenrod-color: palegoldenrod;
   --linen-color: linen;
-  --saddlebrown-color: saddlebrown; 
-  --seethrough-lightgrey-color: #CCCCCC88; 
+  --saddlebrown-color: saddlebrown;
+  --seethrough-lightgrey-color: #CCCCCC88;
 }
 
 
 /* ---------- HomePage View ----------  */
 
 img.user-avatar {
-  max-width: 60px; 
-  max-height: 60px; 
-  border: 1px solid red; 
-  object-fit: contain; /* maintain aspect ratio */
-  position: absolute; 
-  border-radius: 50%; 
-  top: 5; /* 5 */
-  left: 10px; /* 18 */
+  max-width: 60px;
+  max-height: 60px;
+  border: 2px solid red;
+  object-fit: contain;
+  /* maintain aspect ratio */
+  position: absolute;
+  border-radius: 50%;
+  top: 5;
+  /* 5 */
+  left: 10px;
+  /* 18 */
 
   /* transform: rotate(15deg);  */
-  opacity: 1; 
-  transition: opacity 0.3s ease; 
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 img.user-avatar:hover {
-  max-width: 60px; 
-  max-height: 60px; 
-  object-fit: contain; /* maintain aspect ratio */
-  position: absolute; 
-  border-radius: 50%; 
-  border: 1px solid green;
-  top: 5; 
-  left: 10px; 
-  transform: rotate(15deg); 
-  opacity: 0.8; 
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  /* maintain aspect ratio */
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid teal;
+  top: 5;
+  left: 10px;
+  transform: rotate(15deg);
+  opacity: 0.8;
   cursor: pointer;
 }
 
 img#bull-image {
-  max-width: 600px; 
-  max-height: 600px; 
-  object-fit: contain; /* maintain aspect ratio */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  width: 100vh;
   border-radius: 8px;
-  border: 0.5px solid red; 
+  margin-top: 10px;
 }
 
 p#welcome-words {
-  color: white; 
-  position: fixed; 
-  top: 21px; 
-  left: 85px; 
+  color: white;
+  position: absolute;
+  top: 21px;
+  left: 85px;
 }
 
 p#welcome-words span {
-  color: greenyellow; 
+  color: greenyellow;
 }
 
-body > nav {
-  display: flex; 
-  justify-content: flex-end; 
+body>nav {
+  display: flex;
+  justify-content: flex-end;
   align-items: start;
   background-color: red;
-  gap: 18px; 
-  padding: 15px; 
-  opacity: 0.8; 
+  gap: 18px;
+  padding: 15px;
+  opacity: 0.8;
 
-  background-image: url("../images/stock-price.jpg"); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  border-bottom: 2px solid red; 
+  background-image: url("../images/stock-price.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 2px solid red;
 }
 
 
 a {
   color: white;
   text-decoration: none;
-  background: rgb(9, 124, 9); 
-  border-radius: 8px; 
-  padding: 5px; 
+  background: rgb(9, 124, 9);
+  border-radius: 8px;
+  padding: 5px;
 }
 
 a:hover {
   color: #00B7FF;
   text-decoration: none;
-  background: greenyellow; 
-  border-radius: 8px; 
-  padding: 5px; 
+  background: greenyellow;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 body {
-  font-family: "Varela Round", system-ui; 
-  font-weight: 400; 
-  font-style: normal; 
+  font-family: "Varela Round", system-ui;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   /* background-color: #00B7FF; */
   color: black;
   box-sizing: border-box;
-  margin: 0; 
-  min-height: 100vh; 
+  margin: 0;
+  min-height: 100vh;
 
   /* background-image: url("../images/pink-skyline.jpg"); 
   background-size: cover; 
@@ -121,19 +127,19 @@ body {
 
 
 #dark-mode-icon {
-  position: fixed; 
-  bottom: 32px; 
-  right: 32px; 
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
   cursor: pointer;
-  opacity: 1; 
-  transition: opacity 0.3s ease; 
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 #dark-mode-icon:hover {
-  position: fixed; 
-  bottom: 32px; 
-  right: 32px; 
-  opacity: 0.7; 
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -143,37 +149,44 @@ body {
 
 table {
   /* border: 1px solid red;  */
-  margin: auto; 
-  width: 90vw; 
-  border-collapse: collapse; 
-  height: 200px; 
-  overflow-y: auto; 
+  margin: auto;
+  width: 90vw;
+  border-collapse: collapse;
+  height: 200px;
+  overflow-y: auto;
 }
 
-td ion-icon {
-  font-size: 20px; 
-  color: teal; 
+td i {
+  font-size: 20px;
+  color: red;
   font-weight: bold;
-  --ionicon-stroke-width: 50px; 
+  --ionicon-stroke-width: 50px;
 }
 
-td ion-icon:hover {
-  font-size: 20px; 
-  color: teal; 
+td i:hover {
+  font-size: 20px;
+  color: red;
   font-weight: bold;
-  --ionicon-stroke-width: 50px; 
-  opacity: 0.7; 
+  --ionicon-stroke-width: 50px;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 table thead th {
-  font-weight: bolder; 
-  color: red; 
-  font-size: 18px; 
+  font-weight: bolder;
+  color: red;
+  font-size: 18px;
+}
+
+table thead th ion-icon:hover {
+  transform: rotate(180deg);
+  color: red;
+  transition: opacity 0.8s ease;
+  cursor: pointer;
 }
 
 table tbody td {
-  border-bottom: 1px solid black; 
+  border-bottom: 1px solid black;
 }
 
 /* table tbody td:nth-child(1) {
@@ -194,69 +207,71 @@ table tbody td:nth-last-child(1) {
 
 
 #watchlist-wrapper {
-  display: grid; 
+  display: grid;
   grid-template-rows: repeat(3, 150px);
   grid-template-columns: repeat(5, 150px);
-  grid-gap: 1em; 
+  grid-gap: 1.5em;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 .watchlist-item a {
-  border: 1px solid goldenrod; 
+  border: 1px solid goldenrod;
   /* background: green; */
   border-radius: 8px;
-  height: 150px; 
-  display: flex; 
+  height: 150px;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 800;
   font-size: 30px;
 
-  background-image: url("../images/stock.jpg"); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  background-image: url("../images/stock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .watchlist-item a:hover {
-  border: 1px solid goldenrod; 
+  border: 1px solid goldenrod;
   /* background: green; */
   border-radius: 8px;
   /* height: 200px;  */
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 800;
-  background-color: rgba(255,0,0,0.8); 
+  background-color: rgba(255, 0, 0, 0.8);
   cursor: pointer;
 
-  background-image: url("../images/stock.jpg"); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  background-image: url("../images/stock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 img#user-avatar {
-  border: 2px solid red; 
-  border-radius: 50%; 
+  border: 2px solid red;
+  border-radius: 50%;
   max-width: 50px;
   max-height: 50px;
   object-fit: contain;
-  position: absolute; 
-  top: 6px; /* 5 */
-  left: 25px; /* 18 */
-  opacity: 1; 
-  transition: opacity 0.3s ease; 
+  position: absolute;
+  top: 6px;
+  /* 5 */
+  left: 25px;
+  /* 18 */
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 
-/* ---------- /watchlists/:id View ----------  */
+/* ---------- /watchlists/:id (show) View ----------  */
 
 #watchlist-searchbox input {
-  height: 25px; 
-  width: 150px; 
+  height: 25px;
+  width: 150px;
   border: 1px solid red;
   border-radius: 5px;
   text-align: center;
@@ -266,80 +281,270 @@ img#user-avatar {
 
 #watchlist-searchbox ion-icon {
   font-size: 25px;
-  color: red; 
+  color: red;
 }
 
 #watchlist-searchbox ion-icon:hover {
   font-size: 25px;
-  color: red; 
+  color: red;
   opacity: 0.7;
 }
 
 button#delete-ticker-from-watchlist {
   background-color: transparent;
-  border: none; 
-  cursor: none; 
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  font-weight: 200px;
 }
 
+button#delete-ticker-from-watchlist:hover {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 20.5px;
+  font-weight: 200px;
+}
+
+#watchlist-edit-delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+form#watchlist-update-form-input input {
+  border: 2px solid black;
+  margin: auto;
+  border-radius: 8px;
+  height: 20px;
+  width: 210px;
+  text-align: center;
+}
+
+form#watchlist-update-form-input button {
+  background: rgb(9, 124, 9);
+  color: white;
+  margin: auto;
+  border-radius: 8px;
+  height: 25px;
+  width: 55px;
+  text-align: center;
+}
+
+form#watchlist-update-form-input button:hover {
+  margin: auto;
+  color: red;
+  background: greenyellow;
+  border-radius: 8px;
+  height: 25px;
+  width: 55px;
+  text-align: center;
+}
+
+a#edit-icon-btn {
+  background: red;
+  color: white;
+  font-size: 20px;
+  width: 25px;
+  height: 25px
+}
+
+a#edit-icon-btn:hover {
+  opacity: 0.7;
+  color: white;
+  font-size: 20px;
+  width: 25px;
+  height: 25px
+}
+
+form#watchlist-delete-form button {
+  border: none;
+  margin: auto;
+  background: red;
+  color: white;
+  font-size: 25px;
+  border-radius: 8px;
+  width: 35px;
+  height: 30px;
+  text-align: center;
+}
+
+form#watchlist-delete-form button:hover {
+  border: none;
+  margin: auto;
+  background: red;
+  color: white;
+  font-size: 25px;
+  border-radius: 8px;
+  opacity: 0.7;
+  width: 35px;
+  height: 30px;
+  text-align: center;
+}
+
+#select-and-add-to-watchlist-form select {
+  border: 1px solid black;
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#select-and-add-to-watchlist-form button {
+  width: 120px;
+  height: 22px;
+  border-radius: 8px;
+  background: green;
+  color: white;
+}
+
+#select-and-add-to-watchlist-form button:hover {
+  width: 120px;
+  height: 22px;
+  border-radius: 8px;
+  background: greenyellow;
+  color: red;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* ---------- /watchlists/new view ----------  */
+
+form#new-watchlist-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: teal;
+  padding: 100px;
+  margin: auto;
+}
+
+form#new-watchlist-form input {
+  border: 1px solid red;
+  border-radius: 8px;
+  height: 25px;
+  width: 250px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+form#new-watchlist-form button {
+  border-radius: 8px;
+  background: red;
+  color: white;
+  height: 25px;
+
+}
+
+form#new-watchlist-form button:hover {
+  border-radius: 8px;
+  background: greenyellow;
+  color: black;
+  height: 25px;
+  opacity: 0.7;
+}
 
 
 /* ---------- Media Query ----------  */
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   img#bull-image {
-    max-width: 400px; 
-    max-height: 400px; 
+    max-width: 400px;
+    max-height: 400px;
   }
 
-  body > nav {
-    display: flex; 
+  body>nav {
+    display: flex;
     justify-content: flex-start;
-    align-items: end; 
-    width: 100%; 
+    align-items: end;
+    width: 100%;
     background-color: blue;
   }
 
   img.user-avatar {
-    position: fixed; 
-    top: 5px; 
-    right: 10px; 
+    position: fixed;
+    top: 5px;
+    right: 10px;
   }
-}
+} */
 
-/* @media (max-width: 380) {
-  body > nav {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end;
-    align-items: end; 
-    font-size: 5px; 
-  }
 
+/* Styles for medium screens (e.g., tablets) */
+@media (max-width: 768px) {
   img#bull-image {
-    width: 150px; 
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 0.5px solid red;
   }
-}  */
 
-@media only screen and (min-width: 400px) and (max-width: 600px) {
-
-  body > nav {
-    display: flex; 
-    flex-direction: row; 
+  body>nav {
     justify-content: flex-start;
-    align-items: end; 
-    /* width: 100%;  */
-    /* font-size: 5px;  */
-    /* background: pink;  */
+    align-items: flex-start;
   }
 
+  p#welcome-words {
+    position: fixed;
+    top: 70px;
+    left: 5px;
+    color: red;
+  }
+
+}
+
+/* Styles for smaller screens (e.g., smartphones) */
+@media (max-width: 480px) {
   img#bull-image {
-    width: 350px; 
-    height: 350px; 
-    border: none; 
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 0.5px solid red;
+  }
+
+  body>nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
+@media (max-width: 1000px) {
+  #watchlist-wrapper {
+    grid-template-columns: repeat(3, 150px);
+  }
+}
 
+@media (max-width: 600px) {
+  #watchlist-wrapper {
+    grid-template-columns: repeat(2, 150px);
+  }
+}
+
+@media (max-width: 400px) {
+  #watchlist-wrapper {
+    grid-template-columns: repeat(1, 100px);
+  }
+
+  body>nav {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+  }
+
+  p#welcome-words {
+    position: fixed;
+    top: 6px;
+    left: 5px;
+    color: red;
+  }
+
+
+}
 
 /* ---------- Footer View ----------  */
 
@@ -348,8 +553,10 @@ footer {
   color: red;
   font-size: .9rem;
   /* background: red;  */
-  position: fixed; 
-  bottom: 0; 
-  width: 100%; 
-  padding: 10px; 
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px;
 }

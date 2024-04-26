@@ -1,43 +1,52 @@
 <%- include('../partials/header') %> 
 
-<% if (edit) { %>
-<form action="/watchlists/<%= watchlist._id %>/?_method=PUT" method="POST">
-  <input type="text" value="<%= watchlist.name  %>" name="name" />
-  <button type="submit">Update</button>
-</form>
-<% } %>
+<!-- edit form shows up if 'edit=true' in req.params  -->
+
+<div id="watchlist-edit-delete-container">
+  <% if (edit) { %>
+  <form id="watchlist-update-form-input" action="/watchlists/<%= watchlist._id %>/?_method=PUT" method="POST">
+    <input type="text" value="<%= watchlist.name  %>" name="name" />
+    <button type="submit">Update</button>
+  </form>
+  <% } else { %>
+    <a id="edit-icon-btn" href="/watchlists/<%= watchlist._id %>?edit=true">
+      <ion-icon name="create-outline"></ion-icon>
+    </a>
+    <form id="watchlist-delete-form" action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
+      <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
+    </form>
+  <% } %>
+  
+</div>
 
 <!-- <div id="watchlist-searchbox">
   <input type="text" placeholder="Search for ticker" />
   <ion-icon name="search-circle-outline"></ion-icon>
 </div> -->
-
-<a href="/watchlists/<%= watchlist._id %>?edit=true"
-  ><ion-icon name="create-outline"></ion-icon>Edit</a
->
+<br>
 
 <div id="select-ticker-to-add-to-watchlist">
-  <form action="/watchlists/<%= watchlist._id %>?_method=DELETE" method="POST">
-    <button type="submit"><ion-icon name="trash-outline"></ion-icon></button>
-  </form>
-  <hr />
-  <form action="/watchlists/<%= watchlist._id %>/tickers" method="POST">
+  <form id="select-and-add-to-watchlist-form" action="/watchlists/<%= watchlist._id %>/tickers" method="POST">
     <select name="symbolId">
+        <!-- <option value="">Select a ticker </option> -->
       <% tickers.forEach(ticker => { %>
-      <option value="<%= ticker._id %>"><%= ticker.symbol %></option>
+        <option value="<%= ticker._id %>"><%= ticker.symbol %></option>
       <% }) %>
     </select>
     <button type="submit">Add to Watchlist</button>
   </form>
 </div>
 
+<br>
+<hr>
+
 <% if (watchlist.stocks.length) { %>
 <table>
   <thead>
     <tr>
-      <th>Symbol</th>
+      <th>Symbol<ion-icon name="caret-down-outline"></ion-icon></th>
       <th>Name</th>
-      <th>Price</th>
+      <th>Price<ion-icon name="caret-down-outline"></ion-icon></th>
       <th>Currency</th>
       <th>CEO</th>
       <th>Avg Volume</th>
