@@ -57,7 +57,7 @@
   <tbody>
     <% watchlist.stocks.forEach(stock => { %>
     <tr>
-      <td><%= stock.symbol %></td>
+      <td id="ticker-symbol"><%= stock.symbol %></td>
       <td><%= stock.name %></td>
       <td><%= stock.price %></td>
       <td><%= stock.currency %></td>
