@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Welcome to the Stock Tracker repository! This project is implemented using NodeJs Express and MangoDB on the backend and HTML, CSS, and JavaScript on the frontend. [live link](https://stock-tracker-29af93574a43.herokuapp.com/ "target=blank")
+Welcome to the Stock Tracker repository! This hobby project ideation originated from my own difficulties in finding a site that allows you to create a portfolio watchlist tracking your favourite stocks. There are a lot of choices out there but most have to have a paid plan or have way too much content that you may or may not be interested in. The app is implemented using NodeJs Express and MangoDB on the backend and HTML, CSS, and JavaScript on the frontend. [live link](https://stock-tracker-29af93574a43.herokuapp.com/ "target=blank")
 
 ![!Alt Stock Tracker](public/images/wireframe.png)
 
@@ -89,6 +89,8 @@ These are the feature on its way:
 4. Ability to view public watchlists 
 
 5. Ability to click on a ticker and have a discussion page on the ticker 
+
+6. Preserving user chosen dark/light mode theme throughout the session
 
 ## Contributing
 
