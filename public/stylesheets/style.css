@@ -220,12 +220,17 @@ table tr:nth-child(even) {
 
 #watchlist-wrapper {
   display: grid;
-  grid-template-rows: repeat(3, 150px);
+  grid-template-rows: repeat(5, 150px);
   grid-template-columns: repeat(5, 150px);
   grid-gap: 1.5em;
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  background-image: url("../images/pink-skyline.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .watchlist-item a {
