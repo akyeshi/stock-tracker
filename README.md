@@ -14,7 +14,7 @@
 Welcome to the Stock Tracker repository! This hobby project ideation originated with my own difficulties in finding a site that allows you to create a portfolio watchlist tracking your favourite stocks. There are a lot of choices out there but most have to have a paid plan or have way too much content that you may or may not be interested in. The app is implemented using NodeJs Express and MangoDB on the backend and HTML, CSS, and JavaScript on the frontend. 
 
 ![!Alt Stock Tracker](public/images/wireframe.png)
-### [DEMO LIVE LINK](https://stock-tracker-29af93574a43.herokuapp.com "target=_blank")
+### [DEMO LIVE LINK](https://stock-tracker-29af93574a43.herokuapp.com) "target=_blank")
 
 ## Technologies Used
 
@@ -46,10 +46,10 @@ Welcome to the Stock Tracker repository! This hobby project ideation originated 
 
 ## Features
 
-- Home page with dark/light mode theme. 
-- Alpha Vantage API to receive near realtime maket data on the ticker prices. 
-- Responsive design ensuring a seamless experience across different devices and screen sizes.
-- Watchlist feature with full CRUD functionality
+- Intuitive User Interface: Sleek and modern home page with a visually appealing dark or light mode theme, allowing you to customize the look and feel to your preference
+- Real-Time Market Data(15min delay): Seamless integration with the Alpha Vantage API ensures you receive near real-time market data on your selected tickers, keeping you informed of the latest price movements.
+- Responsive Design: built with a mobile-first approach, ensuring a smooth and consistent experience across a wide range of devices and screen sizes, from desktops to smartphones.
+- Personalized Watchlists: Create and manage your own watchlists with full CRUD (Create, Read, Update, Delete) functionality, allowing you to easily track the stocks that matter most to you.
 
 ## Installation
 
