@@ -13,8 +13,10 @@
 
 Welcome to the Stock Tracker repository! This hobby project ideation originated with my own difficulties in finding a site that allows you to create a portfolio watchlist tracking your favourite stocks. There are a lot of choices out there but most have to have a paid plan or have way too much content that you may or may not be interested in. The app is implemented using NodeJs Express and MangoDB on the backend and HTML, CSS, and JavaScript on the frontend. 
 
+## Wireframe & ERD (Entity Relationship Diagram)
+![!Alt ERD](public/images/erd.png)
 ![!Alt Stock Tracker](public/images/wireframe.png)
-### [DEMO LIVE LINK](https://stock-tracker-29af93574a43.herokuapp.com) "target=_blank")
+### [DEMO LIVE LINK](https://stock-tracker-29af93574a43.herokuapp.com "target=_blank")
 
 ## Technologies Used
 
