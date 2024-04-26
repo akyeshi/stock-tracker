@@ -1,4 +1,4 @@
-# Blackjack Game
+# Stock Tracker 
 
 ## Table of Contents
 
