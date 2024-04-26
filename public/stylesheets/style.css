@@ -95,7 +95,7 @@ body>nav {
 a {
   color: white;
   text-decoration: none;
-  background: rgb(9, 124, 9);
+  background: red;
   border-radius: 8px;
   padding: 5px;
 }
