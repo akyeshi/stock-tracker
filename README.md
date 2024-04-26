@@ -13,7 +13,7 @@
 
 Welcome to the Stock Tracker repository! This project is implemented using NodeJs Express and MangoDB on the backend and HTML, CSS, and JavaScript on the frontend. [live link](https://stock-tracker-29af93574a43.herokuapp.com/ "target=blank")
 
-![!Alt Stock Tracker](assets/images/wireframe.png)
+![!Alt Stock Tracker](public/images/wireframe.png)
 
 ## Technologies Used
 
