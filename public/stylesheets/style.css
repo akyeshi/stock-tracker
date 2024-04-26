@@ -187,7 +187,8 @@ table thead th ion-icon:hover {
 }
 
 table tbody td {
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid red; */
+  color: black;
 }
 
 table tbody td#ticker-symbol {
@@ -199,18 +200,19 @@ table tbody td#ticker-symbol:hover {
   cursor: pointer;
 }
 
-/* table tbody td:nth-child(1) {
-  border-left: 1px solid red; 
+/* target odd rows */
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+  color: #f1e7e7dc;
+  /* color: red; */
 }
 
-table tbody td:nth-last-child(1) {
-  border-right: 1px solid red; 
-} */
-
-/* table tbody td:nth-last-child(-n+2) {
-  border-collapse: collapse;
-  border-bottom: 1px solid purple; 
-} */
+/* target even rows */
+table tr:nth-child(even) {
+  background-color: #f1e7e7dc;
+  color: #ffffff;
+  /* color: blue; */
+}
 
 
 /* ---------- /watchlists View ----------  */
