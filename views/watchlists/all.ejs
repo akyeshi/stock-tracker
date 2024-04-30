@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<div id="watchlist-wrapper">
+  <% watchlists.forEach(watchlist => { %>
+    <div id="watchlist-item">
+      <a href="/watchlists/<%= watchlist._id %>"><%= watchlist.name %></a>
+    </div>
+  <% }) %>
+</div>
+
+
+
+
+
+
+<%- include('../partials/footer') %>

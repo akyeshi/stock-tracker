@@ -8,6 +8,7 @@ module.exports = {
   new: newWatchlist,
   delete: deleteWatchlist,
   addToWatchlist, 
+  allWatchlists, 
 };
 
 // watchlistsCtrl.index()
@@ -65,3 +66,8 @@ async function addToWatchlist(req, res){
   await watchlist.save(); 
   res.redirect(`/watchlists/${watchlist._id}`); 
 }
+
+// watchlistsCtrl.allWatchlists()
+async function allWatchlists(req, res) {
+  const watchlists = await Watchlist.find({}); 
+  res.render('watchlists/all', {watchlists, title: 'All Watchlists'})};

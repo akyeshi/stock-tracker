@@ -5,10 +5,7 @@ const watchlistsCtrl = require("../controllers/watchlists");
 router.get("/", watchlistsCtrl.index);
 
 // GET /watchlists/all
-// router.get("/all", watchlistsCtrl.allWatchlists);
-
-// POST /watchlist/:id/tickers
-// router.post("/:id/tickers", watchlistsCtrl.add)
+router.get("/all", watchlistsCtrl.allWatchlists);
 
 // GET /watchlists/new
 router.get("/new", watchlistsCtrl.new);
